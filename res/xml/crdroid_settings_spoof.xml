@@ -52,6 +52,13 @@
             android:summary="@string/gms_spoof_summary"
             android:defaultValue="true"/>
 
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.sys.pihooks.enable.gms_key_attestation_spoof"
+            android:title="@string/keybox_spoof_title"
+            android:summary="@string/keybox_spoof_summary"
+            android:dependency="persist.sys.pixelprops.gms"
+            android:defaultValue="false"/>
+
         <com.android.settings.preferences.ui.AdaptivePreference
             android:key="show_pif_properties"
             android:title="@string/show_pif_properties_title"

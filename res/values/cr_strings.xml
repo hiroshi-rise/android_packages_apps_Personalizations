@@ -1893,6 +1893,10 @@
     <!-- GMS Spoof -->
     <string name="gms_spoof_title">Enable GMS spoof</string>
     <string name="gms_spoof_summary">Spoof your device to pass Google Play Attestation</string>
+    <string name="keybox_spoof_title">Enable keybox spoofing</string>
+    <string name="keybox_spoof_summary">Spoof your keybox to pass Google Play Attestation (MEETS_STRONG_INTEGRITY)</string>
+
+    <string name="keybox_spoof_option_disabled_missing">Disabled because custom keybox is not installed</string>
     
      <!-- Shake Gestures -->
     <string name="shake_gestures_enabled_title">Shake Gestures</string>

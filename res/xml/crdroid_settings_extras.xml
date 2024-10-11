@@ -57,11 +57,11 @@
             android:max="1024"
             android:min="4" />
 
-        <com.android.settings.preferences.ui.AdaptivePreference
+<!--         <com.android.settings.preferences.ui.AdaptivePreference
             android:key="smart_power_off"
             android:title="@string/smart_power_off_title"
             android:summary="@string/smart_power_off_time_summary"
-            android:fragment="com.crdroid.settings.fragments.SmartPowerOff" />
+            android:fragment="com.crdroid.settings.fragments.SmartPowerOff" /> -->
 
         <!-- Smart Pixels -->
         <com.android.settings.preferences.ui.AdaptivePreference

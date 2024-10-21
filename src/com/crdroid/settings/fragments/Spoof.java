@@ -55,7 +55,6 @@ public class Spoof extends SettingsPreferenceFragment implements Preference.OnPr
 
     public static final String TAG = "Spoof";
     private static final String SYS_GMS_SPOOF = "persist.sys.pixelprops.gms";
-    private static final String SYS_KEY_ATTESTATION_SPOOF = "persist.sys.pihooks.enable.gms_key_attestation";
     private static final String SYS_GOOGLE_SPOOF = "persist.sys.pixelprops.google";
     private static final String SYS_PROP_OPTIONS = "persist.sys.pixelprops.all";
     private static final String SYS_GAMEPROP_ENABLED = "persist.sys.gameprops.enabled";
@@ -67,7 +66,6 @@ public class Spoof extends SettingsPreferenceFragment implements Preference.OnPr
     private boolean isPixelDevice;
 
     private Preference mGmsSpoof;
-    private Preference mKeyAttestationSpoof;
     private Preference mGoogleSpoof;
     private Preference mGphotosSpoof;
     private Preference mPropOptions;
@@ -88,7 +86,6 @@ public class Spoof extends SettingsPreferenceFragment implements Preference.OnPr
         mGamePropsSpoof = findPreference(SYS_GAMEPROP_ENABLED);
         mGphotosSpoof = findPreference(SYS_GPHOTOS_SPOOF);
         mGmsSpoof = findPreference(SYS_GMS_SPOOF);
-        mKeyAttestationSpoof = findPreference(SYS_KEY_ATTESTATION_SPOOF);
         mGoogleSpoof = findPreference(SYS_GOOGLE_SPOOF);
         mPropOptions = findPreference(SYS_PROP_OPTIONS);
         mPifJsonFilePreference = findPreference(KEY_PIF_JSON_FILE_PREFERENCE);
@@ -107,11 +104,6 @@ public class Spoof extends SettingsPreferenceFragment implements Preference.OnPr
                 mGoogleSpoof.setEnabled(false);
                 mGoogleSpoof.setSummary(R.string.google_spoof_option_disabled);
             }
-        }
-
-        if (!KeyProviderManager.isKeyboxAvailable()) {
-            mKeyAttestationSpoof.setEnabled(false);
-            mKeyAttestationSpoof.setSummary(R.string.keybox_spoof_option_disabled_missing);
         }
 
         mGmsSpoof.setOnPreferenceChangeListener(this);
@@ -192,7 +184,8 @@ public class Spoof extends SettingsPreferenceFragment implements Preference.OnPr
                 "persist.sys.pihooks_MODEL",
                 "persist.sys.pihooks_PRODUCT",
                 "persist.sys.pihooks_SECURITY_PATCH",
-                "persist.sys.pihooks_DEVICE_INITIAL_SDK_INT"
+                "persist.sys.pihooks_DEVICE_INITIAL_SDK_INT",
+                "persist.sys.pihooks_INCREMENTAL"
             };
             for (String key : keys) {
                 String value = SystemProperties.get(key, null);
@@ -322,8 +315,7 @@ public class Spoof extends SettingsPreferenceFragment implements Preference.OnPr
             || preference == mPropOptions
             || preference == mGoogleSpoof
             || preference == mGphotosSpoof
-            || preference == mGamePropsSpoof 
-            || preference == mKeyAttestationSpoof) {
+            || preference == mGamePropsSpoof) {
             SystemRestartUtils.showSystemRestartDialog(getContext());
             return true;
         }

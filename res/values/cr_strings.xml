@@ -1893,11 +1893,27 @@
     <!-- GMS Spoof -->
     <string name="gms_spoof_title">Enable GMS spoof</string>
     <string name="gms_spoof_summary">Spoof your device to pass Google Play Attestation</string>
+
+    <!-- Keybox Spoof -->
+    <string name="keybox_spoof_screen_title">Keybox Spoofing</string>
+    <string name="keybox_spoof_preference_title">Manage keybox spoofing</string>
+    <string name="keybox_spoof_preference_summary">Spoof your keybox to pass key attestations</string>
+
     <string name="keybox_spoof_title">Enable keybox spoofing</string>
-    <string name="keybox_spoof_summary">Spoof your keybox to pass Google Play Attestation (MEETS_STRONG_INTEGRITY)</string>
 
     <string name="keybox_spoof_option_disabled_missing">Disabled because custom keybox is not installed</string>
-    
+
+    <string name="keybox_spoof_load_xml_title">Load XML keybox</string>
+
+    <string name="keybox_spoof_status_title">Display current spoofing status</string>
+
+    <string name="keybox_spoof_use_xml_title">Use custom XML</string>
+    <string name="keybox_spoof_use_xml_summary">Enable to use your own XML instead of embedded values</string>
+    <string name="keybox_spoof_use_xml_summary_disabled">Enable to use your own XML instead of embedded values (disabled because no XML loaded)</string>
+
+    <string name="keybox_xml_load_toast_message">Keybox loaded successfully.</string>
+    <string name="keybox_xml_load_toast_error_message">Error loading keybox!</string>
+
      <!-- Shake Gestures -->
     <string name="shake_gestures_enabled_title">Shake Gestures</string>
     <string name="shake_gestures_enabled_summary">Shake your device to perform actions</string>

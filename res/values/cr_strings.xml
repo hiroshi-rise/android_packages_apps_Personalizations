@@ -1894,6 +1894,8 @@
     <string name="gms_spoof_title">Enable GMS spoof</string>
     <string name="gms_spoof_summary">Spoof your device to pass Google Play Attestation</string>
     
+    <string name="block_gms_key_attestation_title">Block key attestation</string>
+    <string name="block_gms_key_attestation_summary">Block key attestation requests from GMS (disable if using TrickyStore)</string>
      <!-- Shake Gestures -->
     <string name="shake_gestures_enabled_title">Shake Gestures</string>
     <string name="shake_gestures_enabled_summary">Shake your device to perform actions</string>
